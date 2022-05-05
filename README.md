@@ -9,8 +9,8 @@
 ***
 #### This project was creatated with the use of Trello board, ERD for backend and a component hierarchy digram.
 #### Link to Trello [HERE](https://trello.com/b/LdMOEvSr/my-books)
-#### ERD React link [HERE](https://drive.google.com/file/d/1_AJc_x5UaSoUaf5GGcFmWlFSG17DnZYY/view)
-#### ERD Server link [HERE](https://drive.google.com/file/d/1_AJc_x5UaSoUaf5GGcFmWlFSG17DnZYY/view)
+#### ERD Vue link [HERE](https://i.ibb.co/GpxzzCF/Component-H-drawio.png)
+#### ERD Server link [HERE](https://i.ibb.co/WvvRhZd/server-drawio.png)
 ***
 ### *Getting Started*
 - fork and clone this and the [front end](https://github.com/lmao98/soccergram-front-end) repo
