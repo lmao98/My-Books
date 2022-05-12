@@ -15,11 +15,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   Book_list.init({
     user_id: DataTypes.INTEGER,
+    allowNull: false,
     book_id: DataTypes.INTEGER,
+    allowNull: false,
     read: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Book_list',
+    tableName: 'book_list'
   });
   return Book_list;
 };
