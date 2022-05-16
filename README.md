@@ -8,23 +8,6 @@
 
 #### The user will be able to sign up for the website than login, checkout the latest books they have read, creating a list of books to read also deleting and updating.
 
-#  features/pages (crud )
-<!-- 1. discover: books we have not read/ add
-2. wishlist: books added to my collection/ remove
-3. readlist:  -->
-
-4. book details: (has comments crud)
-pages:
-  -   about (info and links)
-  -   home 
-        (nav, header photo)
-        (getting started => creating a book list), 
-        (check my list => mybooklist) (search bar )
-  -   mybooks 
-        (list) (check the books avalable, remove a book, add a book)
-  -   
-
----
 
 #### Creator Linkedin page
 
