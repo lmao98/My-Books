@@ -4,10 +4,8 @@
 
 <script>
 export default {
-
-}
+  name: "NotFound",
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
