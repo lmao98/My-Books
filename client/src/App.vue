@@ -21,37 +21,67 @@
         />
       </div>
 
-      <ul>
-        <li>Home</li>
-        
-      </ul>
+      <div class="nav__items d-flex gap-2 ml-2">
+        <a class="white--text" href="#/">Home</a>
+        <a class="white--text" href="#/about">About</a>
+        <a class="white--text" href="#/mybooklist">My book list</a>
+      </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank" text>
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-btn small color="primary">Sign in</v-btn>
+      <v-btn outline color="white primary--text" dark>Sign up</v-btn>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld />
+       <component :is="currentView" />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
+import HomePage from "./components/HomePage";
+import AboutPage from "./components/AboutPage";
+import NotFound from "./components/NotFound";
+import MyBookListPageVue from './components/MyBookListPage.vue';
 
+const routes = {
+  "/": HomePage,
+  "/about": AboutPage,
+  "/mybooklist": MyBookListPageVue,
+  
+};
 export default {
   name: "App",
 
   components: {
     HelloWorld,
+    HomePage,
+    AboutPage,
+    NotFound,
   },
 
-  data: () => ({
-    //
-  }),
+  data() {
+    return {
+      currentPath: window.location.hash,
+    };
+  },
+  computed: {
+    currentView() {
+      return routes[this.currentPath.slice(1) || "/"] || NotFound;
+    },
+  },
+  mounted() {
+    window.addEventListener("hashchange", () => {
+      this.currentPath = window.location.hash;
+    });
+  },
 };
 </script>
+
+<style scoped>
+.nav__items {
+  gap: 1rem;
+}
+</style>
