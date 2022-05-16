@@ -13,7 +13,7 @@
 #### ERD Server link [HERE](https://i.ibb.co/WvvRhZd/server-drawio.png)
 ***
 ### *Getting Started*
-- fork and clone this and the [front end](https://github.com/lmao98/soccergram-front-end) repo
+- fork and clone this repo
 - create your own branch
 - check the future updates section and help me with that.
 ***
