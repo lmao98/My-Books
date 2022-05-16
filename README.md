@@ -15,9 +15,13 @@
 
 4. book details: (has comments crud)
 pages:
-  -   about
-  -   home (nav, header photo)
-  -   mybooks (list)
+  -   about (info and links)
+  -   home 
+        (nav, header photo)
+        (getting started => creating a book list), 
+        (check my list => mybooklist) (search bar )
+  -   mybooks 
+        (list) (check the books avalable, remove a book, add a book)
   -   
 
 ---
