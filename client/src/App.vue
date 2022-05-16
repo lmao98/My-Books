@@ -22,9 +22,9 @@
       </div>
 
       <div class="nav__items d-flex gap-2 ml-2">
-        <a class="white--text" href="#/">Home</a>
-        <a class="white--text" href="#/about">About</a>
-        <a class="white--text" href="#/mybooklist">My book list</a>
+        <a class="white--text" href="/#/">Home</a>
+        <a class="white--text" href="/#/about">About</a>
+        <a class="white--text" href="/#/mybooklist">My book list</a>
       </div>
 
       <v-spacer></v-spacer>
