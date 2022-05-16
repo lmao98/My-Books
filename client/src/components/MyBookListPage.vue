@@ -4,10 +4,8 @@
 
 <script>
 export default {
-
-}
+  name: "MyBookListPage",
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
