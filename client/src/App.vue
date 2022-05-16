@@ -29,12 +29,13 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn small color="primary">Sign in</v-btn>
-      <v-btn outline color="white primary--text" dark>Sign up</v-btn>
+      <v-btn small elevation="" color="" href="/#/signin">Sign In</v-btn>
+
+      <v-btn outline color="white primary--text" dark href="/#/signup">Sign up</v-btn>
     </v-app-bar>
 
     <v-main>
-       <component :is="currentView" />
+      <component :is="currentView" />
     </v-main>
   </v-app>
 </template>
@@ -44,13 +45,16 @@ import HelloWorld from "./components/HelloWorld";
 import HomePage from "./components/HomePage";
 import AboutPage from "./components/AboutPage";
 import NotFound from "./components/NotFound";
-import MyBookListPageVue from './components/MyBookListPage.vue';
+import MyBookListPageVue from "./components/MyBookListPage.vue";
+import SignInPage from "./components/SignInPage.vue";
+import SignUpPage from "./components/SignUpPage.vue";
 
 const routes = {
   "/": HomePage,
   "/about": AboutPage,
   "/mybooklist": MyBookListPageVue,
-  
+  "/signin": SignInPage,
+  "/signup": SignUpPage,
 };
 export default {
   name: "App",
@@ -60,6 +64,7 @@ export default {
     HomePage,
     AboutPage,
     NotFound,
+    SignUpPage,
   },
 
   data() {
