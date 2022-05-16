@@ -8,7 +8,6 @@
 
 #### The user will be able to sign up for the website than login, checkout the latest books they have read, creating a list of books to read also deleting and updating.
 
-
 #### Creator Linkedin page
 
 [Abdullah Albayati](https://www.linkedin.com/in/abdullah-albayati-85b3771b4/)
@@ -33,7 +32,7 @@
 
 ---
 
-#### Link to the deployed website [HERE]()
+#### Link to the deployed website [HERE](https://git.heroku.com/my-boo.git)
 
 ---
 
