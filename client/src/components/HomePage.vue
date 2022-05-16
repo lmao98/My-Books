@@ -29,8 +29,9 @@
 
 <script>
 export default {
+  name: "HomePage",
   methods: {
-    handleFormSubmit: (event)=>{
+    handleFormSubmit: (event) => {
       event.preventDefault();
       console.log(event.target);
     },
