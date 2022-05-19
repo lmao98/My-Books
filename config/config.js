@@ -9,7 +9,7 @@ module.exports = {
     dialect: "postgres",
   },
   production: {
-    database: process.env.DATASE_URL || 'database_is_not_set',
+    use_env_variable: 'DATABASE_URL',
     dialect: "postgres",
     dialectOptions: {
       ssl: {
