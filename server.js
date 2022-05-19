@@ -11,6 +11,10 @@ app.use(express.urlencoded({ extended: true }))
 const AppRouter = require('./routes/AppRouter')
 
 
+
+
 app.get('/', (req, res) => res.json({ message: 'Server Works' }))
+
+//api routes /api/... 
 app.use('/api', AppRouter)
 app.listen(PORT, () => console.log(`Server Started On Port: ${PORT}`))

@@ -26,8 +26,8 @@ import { AlertError, makeRequest } from "./axios";
 // const provider = new GoogleAuthProvider();
 
 const AUTH_ENDPOINTS = {
-  login: "/login",
-  signup: "/register",
+  login: "/api/auth/login",
+  signup: "/api/auth/register",
 };
 
 /**
@@ -37,9 +37,10 @@ const AUTH_ENDPOINTS = {
  * @param {*} password_confirm
  * @returns {Promise} Promise<{user,token}>
  */
-export function signup(email, password, password_confirm) {
+export function signup(email, firstName, lastName, password, password_confirm) {
   if (password != password_confirm) throw new AlertError("password and password confirmation do not match");
-  return makeRequest(AUTH_ENDPOINTS.signup, "post", { email, password });
+
+  return makeRequest(AUTH_ENDPOINTS.signup, "post", { email, firstName, lastName, password, password_confirm });
 }
 
 /**

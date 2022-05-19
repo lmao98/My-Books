@@ -7,8 +7,11 @@ export function makeRequest(url, method = "GET", data) {
     throw new AlertError("Error: invalid url Provided");
   }
 
+  url = base_url + url;
+  console.log(method, url);
+
   return axios({
-    url: base_url + url,
+    url,
     method,
     data,
   }).then(

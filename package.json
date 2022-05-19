@@ -16,6 +16,7 @@
     "start": "nodemon server.js",
     "dev": "nodemon server.js",
     "build": "npm install && npx sequelize-cli db:migrate",
-    "client": "cd client&& npm run serve"
+    "client": "cd client&& npm run serve",
+    "backend": "nodemon server.js"
   }
 }

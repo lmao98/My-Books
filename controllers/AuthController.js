@@ -23,13 +23,19 @@ const Login = async (req, res) => {
 
 const Register = async (req, res) => {
   try {
-    const { email, password, firstName, lastName } = req.body;
+    const { email, password, firstName, lastName, password_confirm } = req.body;
 
-    if (await User.findOne({ email })) {
+    console.log(req.body);
+    if (await User.findOne({ where: { email } })) {
       throw new Error("Error: email already exists");
     }
 
+    if (password !== password_confirm) {
+      throw new Error("Error password and password confirmation do not match");
+    }
+
     let passwordDigest = await middleware.hashPassword(password);
+
     const user = await User.create({ email, password: passwordDigest, firstName, lastName });
 
     let token = middleware.createToken({ id: user.id, email: user.email });

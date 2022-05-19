@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Book extends Model {
     /**
@@ -11,31 +9,53 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Book.belongsTo(models.User, {
-        foreignKey: 'user_id',
-        as: 'user',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
-      })
+        foreignKey: "user_id",
+        as: "user",
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
+      });
       Book.hasMany(models.Comment, {
-        foreignKey: 'book_id',
-        as: 'book',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
-      })
+        foreignKey: "comment_id",
+        as: "comment",
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
+      });
     }
   }
-  Book.init({
-    book_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+  Book.init(
+    {
+      book_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      author: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      published_date: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      book_link: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        field: "user_id",
+        onDelete: "CASCADE",
+        references: {
+          model: "user",
+          key: "id",
+        },
+      },
     },
-    author: DataTypes.STRING, allowNull: false,
-    published_date: DataTypes.STRING, allowNull: false,
-    book_link: DataTypes.STRING, allowNull: false
-  }, {
-    sequelize,
-    modelName: 'Book',
-    tableName: 'book'
-  });
+    {
+      sequelize,
+      modelName: "Book",
+      tableName: "book",
+    }
+  );
   return Book;
 };
