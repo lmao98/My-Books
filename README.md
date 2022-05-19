@@ -32,7 +32,7 @@
 
 ---
 
-#### Link to the deployed website [HERE](https://git.heroku.com/my-boo.git)
+#### Link to the deployed website [HERE](https://dry-journey-46348.herokuapp.com/)
 
 ---
 
