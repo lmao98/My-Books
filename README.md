@@ -4,7 +4,7 @@
 
 ### By: Abdullah Albayati
 
-### An applectation for user to see their readings
+### An applictation for user to see their readings
 
 #### The user will be able to sign up for the website than login, checkout the latest books they have read, creating a list of books to read also deleting and updating.
 
